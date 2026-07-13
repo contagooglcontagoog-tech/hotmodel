@@ -1,32 +1,41 @@
-# React + TypeScript + Vite
+# hotmodel2026 🔥
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicação completa desenvolvida em React + TypeScript + Vite. Projetada para ser implantada de forma 100% estática na **Vercel** sem a necessidade de um banco de dados real (MySQL/PostgreSQL), utilizando persistência local (`localStorage`) para simular o banco de dados.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vitrine Premium de Vendas**: Landing page moderna com tema escuro (dark mode), efeitos de vidro (glassmorphic) e bordas neon.
+- **Validação de Maioridade**: Filtro inicial de 18+ para conformidade e segurança legal.
+- **Funil com Captura de Lead**: Captura dados do cliente (Nome, WhatsApp, E-mail) antes de liberar o botão de redirecionamento de compra.
+- **BackRedirect / PopUnder Ativo**: Popup com oferta especial por tempo limitado ao detectar que o usuário tenta sair da página (cursor saindo do navegador).
+- **Painel Administrativo (/admin)**:
+  - **Dashboard**: Gráficos e cartões de estatísticas com faturamento total, taxa de conversão, leads capturados, etc.
+  - **CRUD de Modelos**: Permite adicionar, editar e excluir modelos do catálogo. Suporta uploads locais direto no navegador com conversão automática para Base64.
+  - **Gerenciador de Leads**: Visualize e exclua os contatos capturados, com link direto de início de conversa do WhatsApp.
+  - **Histórico de Vendas**: Tabela de transações com status (Aprovado, Pendente, Cancelado).
+  - **Configurações**: Modifique a senha do painel.
 
-## React Compiler
+## 💻 Desenvolvimento Local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the Oxlint configuration
+## 🛠️ Build e Compilação
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+Para compilar para produção:
+```bash
+npm run build
 ```
+Os arquivos gerados estarão no diretório `dist/` prontos para hospedagem.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🔑 Credenciais Padrão do Admin
+
+- **Usuário**: `admin`
+- **Senha**: `admin`
+*(A senha pode ser alterada na aba de Configurações do painel).*
